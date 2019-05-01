@@ -2,7 +2,7 @@ from utils.common import *
 from bs4 import BeautifulSoup
 import utils.database
 
-db = utils.database.DBTool('../fofa.db')
+db = utils.database.DBTool('./fofa.db')
 url = "https://fofa.so/about_client"
 
 html = http_request_get(url)
