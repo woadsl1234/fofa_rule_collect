@@ -11,8 +11,6 @@ import logging
 import requests as requests
 import requests as __requests__
 
-import requests.packages.urllib3
-requests.packages.urllib3.disable_warnings()
 
 if allow_http_session:
     requests = requests.Session()
