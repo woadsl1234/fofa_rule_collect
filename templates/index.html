@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FOFA规则收集</title>
+</head>
+<body>
+    <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+            <h3 class="text-center">
+				FOFA规则收集
+			</h3>
+			<table class="table table-hover table-striped">
+				<thead>
+					<tr>
+						<th>
+							POC名字
+						</th>
+						<th>
+							POC细节
+						</th>
+						<th>
+							危害
+						</th>
+						<th>
+							规则
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+                    {% for i in data %}
+					<tr class="{{ '1' | get_color }}">
+						<td>
+							{{i[1]}}
+						</td>
+						<td>
+							{{i[2]}}
+						</td>
+						<td>
+							{{i[3]}}
+						</td>
+						<td>
+							{{i[4]}}
+						</td>
+					</tr>
+                    {% endfor %}
+				</tbody>
+			</table>
+			<ul class="pagination">
+				<li>
+					 <a href="#">Prev</a>
+				</li>
+				<li>
+					 <a href="#">1</a>
+				</li>
+				<li>
+					 <a href="#">2</a>
+				</li>
+				<li>
+					 <a href="#">3</a>
+				</li>
+				<li>
+					 <a href="#">4</a>
+				</li>
+				<li>
+					 <a href="#">5</a>
+				</li>
+				<li>
+					 <a href="#">Next</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
