@@ -4,7 +4,11 @@ import utils.database
 import urllib3
 import os
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+try:
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+except:
+    pass
+
 os.chdir(os.path.dirname(__file__))
 db = utils.database.DBTool('./fofa.db')
 url = "https://fofa.so/about_client"
