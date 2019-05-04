@@ -9,7 +9,7 @@ try:
 except:
     pass
 
-os.chdir(os.path.dirname(__file__))
+os.chdir(os.path.dirname(sys.argv[0]))
 db = utils.database.DBTool('./fofa.db')
 url = "https://fofa.so/about_client"
 
