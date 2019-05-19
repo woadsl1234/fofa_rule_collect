@@ -1,8 +1,11 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from utils.common import *
 from bs4 import BeautifulSoup
 import utils.database
 import urllib3
 import os
+import re
 
 try:
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -27,8 +30,11 @@ for i, j in enumerate(poc):
         res = []
     if j.a:
         x = j.a.string
+        print(x)
     else:
-        x = j.string
+        x = j.string.split(' ')[1:]
+        x = ' '.join(x)
+        print(x)
     if x == index:
         exit()
     res.append(x)
