@@ -15,7 +15,7 @@ def index():
     db = DB.DBTool('./fofa.db')
     T = db.executeQuery('select * from data order by ID desc')
     res = T.fetchall()
-    pagenum = len(res)
+    pagenum = len(res)//10
 
     return render_template("index.html", data = res, pagenum = xrange(pagenum))
 
@@ -25,7 +25,7 @@ def page(id):
     T = db.executeQuery('select * from data order by ID desc '+'limit '+ str((id-1)*10)+',10')
     res = T.fetchall()
     T = db.executeQuery('select * from data order by ID desc')
-    pagenum = len(T.fetchall())
+    pagenum = len(T.fetchall())//10
 
     return render_template("index.html", data = res , pagenum = xrange(pagenum))
 
